@@ -1,6 +1,6 @@
 {
   "name": "rc-readable",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A javascript formatter that aims to makes all data in the world readable by humans :)",
   "main": "index.js",
   "scripts": {
