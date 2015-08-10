@@ -1,0 +1,27 @@
+{
+  "name": "rc-readable",
+  "version": "0.1.0",
+  "description": "A javascript formatter that aims to makes all data in the world readable by humans :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodolfocaldeira/rc-readable.git"
+  },
+  "keywords": [
+    "readable",
+    "formatter",
+    "rc"
+  ],
+  "author": "Rodolfo Caldeira <me@rodolfocaldeira.com> (http://rodolfocaldeira.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodolfocaldeira/rc-readable/issues"
+  },
+  "homepage": "https://github.com/rodolfocaldeira/rc-readable",
+  "devDependencies": {
+    "tape": "^4.0.3"
+  }
+}
