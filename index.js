@@ -15,8 +15,7 @@ readable.number = function (num, digits) {
   ];
   for (var i = 0; i < si.length; i++) {
     if (num >= si[i].value) {
-      return (num / si[i].value)
-              .toFixed(digits).replace(/\.?0+$/, "") + si[i].symbol;
+      return (num / si[i].value).toFixed(digits) + si[i].symbol;
     }
   }
   return num;
@@ -24,16 +23,15 @@ readable.number = function (num, digits) {
 
 // http://stackoverflow.com/questions/9083037/convert-a-number-into-a-roman-numeral-in-javascript
 readable.romanNumeral = function (num) {
-  if (!+num)
-    return false;
-  var digits = String(+num).split(""),
-      key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+  var digits = String(num).split("");
+  var key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
         "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
-        "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
-      roman = "",
-      i = 3;
-  while (i--)
+        "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+  var roman = "";
+  var i = 3;
+  while (i--) {
     roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+  }
   return Array(+digits.join("") + 1).join("M") + roman;
 };
 
